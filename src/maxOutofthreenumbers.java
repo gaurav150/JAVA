@@ -1,5 +1,3 @@
-package com.cdac.assignment1;
-
 import java.util.*;
 
 public class maxOutofthreenumbers {

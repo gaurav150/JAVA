@@ -1,5 +1,3 @@
-package com.cdac.assignment1;
-
 //7) Multiplication Table: Write a program that generates and prints the multiplication table for a number entered by the user (1 to 10).
 
 import java.util.Scanner;

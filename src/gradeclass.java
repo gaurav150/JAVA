@@ -1,5 +1,3 @@
-package com.cdac.assignment1;
-
 public class gradeclass {
 
     public static void main(String[] args) {

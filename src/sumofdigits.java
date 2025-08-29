@@ -1,4 +1,4 @@
-package com.cdac.assignment1;
+
 
 //6) Sum of Digits: Create a program that calculates the sum of the digits of a given integer.
 //For example, if the input is 123, the output should be 6.

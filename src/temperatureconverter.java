@@ -1,5 +1,3 @@
-package com.cdac.assignment1;
-
 //3) Temperature Converter: Develop a program that converts temperature from Celsius to Fahrenheit. The formula is F = C * 9/5 + 32.
 //Take user input for Celsius and display the result in Fahrenheit.
 public class temperatureconverter {
