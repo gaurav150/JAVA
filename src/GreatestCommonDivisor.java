@@ -6,7 +6,7 @@ public class GreatestCommonDivisor {
         }
         int min = first < second ? first:second;
         int gcd =1;
-        for (int j =1 ; j <= min;j++){
+        for (int j = 1 ; j <= min;j++){
             if (first % j == 0 && second % j == 0){
                 gcd = j;
             }
