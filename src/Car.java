@@ -4,29 +4,53 @@ public class Car {
     private String color = "Gray";
     private int doors = 2;
     private boolean convertible = true;
-    public String getMake(){
+
+    public String getMake() {
         return make;
     }
-    public String getModel(){
+
+    public String getModel() {
         return model;
     }
-    public String getColor(){
+
+    public String getColor() {
         return color;
     }
-    public int getDoors(){
+
+    public int getDoors() {
         return doors;
     }
-    public boolean getConvertible(){
+
+    public boolean getConvertible() {
         return convertible;
     }
 
+    public void setMake(String make) {
+        this.make = make;
+    }
 
-    public void describeCar(){
-        System.out.println("Doors: "+doors);
-        System.out.println("Color: "+color);
-        System.out.println("Model: "+model);
-        System.out.println("Make: "+make);
-        System.out.println("Convertible: "+convertible);
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setConvertible(boolean convertible) {
+        this.convertible = convertible;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
+    public void describeCar() {
+        System.out.println("Doors: " + doors);
+        System.out.println("Color: " + color);
+        System.out.println("Model: " + model);
+        System.out.println("Make: " + make);
+        System.out.println("Convertible: " + convertible);
     }
 }
 
