@@ -90,6 +90,18 @@ public class Main {
         if (helloWorld.contentEquals(helloworldlower)) {
             System.out.println("values are exactly match");
         }
+//        --------------------Composition && Inheritance Implementation ------------
+        ComputerCase computerCase = new ComputerCase("2208","Dell","240");
+        Monitor theMonitor = new Monitor("27inch Beast",
+                "Acer",27,"2540 * 1440");
+        Motherboard motherboard = new Motherboard("Bj-200","Asus",
+                4,6,"v2.44");
+        PersonalComputer thePC = new PersonalComputer("2208","Dell"
+                ,computerCase,motherboard,theMonitor);
+//        thePC.getMonitor().drawPixelAt(8,10,"red");
+//        thePC.getMotherboard().loadProgram("Windows OS");
+//        thePC.getComputerCase().pressPowerButton();
+        thePC.powerUp();
     }
 
     public static void printInformation(String string) {
