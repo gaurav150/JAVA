@@ -1,3 +1,4 @@
+import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -66,6 +67,29 @@ public class Main {
         EnhancedPlayer gautam = new EnhancedPlayer("Gautam");
         System.out.println("Initial Health is "+gautam.healthRemaining());
 
+        Movie theMovie = new Movie("Star wars");
+        theMovie.watchMovie();
+
+        Movie theMovies =  new Adventure("Star wars");
+        theMovies.watchMovie();
+
+        Movie theMoviess = Movie.getMovie("Adventure","Star wars");
+        theMoviess.watchMovie();
+        Scanner s = new Scanner(System.in);
+        while (true){
+            System.out.print("Enter Type(A for Adventure" +
+                    ",C for Comedy " +
+                    "S for ScienceFiction, or Q to quit)");
+            String type =s.nextLine();
+            if("Qq".contains(type)){
+                break;
+            }
+            System.out.println("Enter the movie title: ");
+            String title = s.nextLine();
+            Movie movie = Movie.getMovie(type,title);
+            movie.watchMovie();
+        }
+        s.close();
 
 
 
