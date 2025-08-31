@@ -52,6 +52,25 @@ public class Main {
                 8, "carole");
         System.out.println(jimmy);
 
+        //        ------------------Player---------------------------
+//        Player player = new Player();
+//        player.name = "gautam";
+//        player.weapon = "Sword";
+//        player.health = 10;
+//        int damage = 5;
+//        player.loseHealth(damage);
+//        System.out.println("Remaining Health " + player.healthRemaining());
+//        player.restoreHealth(98);
+//        System.out.println("After Restoring Health " + player.healthRemaining());
+
+        EnhancedPlayer gautam = new EnhancedPlayer("Gautam");
+        System.out.println("Initial Health is "+gautam.healthRemaining());
+
+
+
+
+
+
     }
 
     // new ----------------------Animal codes ------------------
@@ -91,13 +110,13 @@ public class Main {
             System.out.println("values are exactly match");
         }
 //        --------------------Composition && Inheritance Implementation ------------
-        ComputerCase computerCase = new ComputerCase("2208","Dell","240");
+        ComputerCase computerCase = new ComputerCase("2208", "Dell", "240");
         Monitor theMonitor = new Monitor("27inch Beast",
-                "Acer",27,"2540 * 1440");
-        Motherboard motherboard = new Motherboard("Bj-200","Asus",
-                4,6,"v2.44");
-        PersonalComputer thePC = new PersonalComputer("2208","Dell"
-                ,computerCase,motherboard,theMonitor);
+                "Acer", 27, "2540 * 1440");
+        Motherboard motherboard = new Motherboard("Bj-200", "Asus",
+                4, 6, "v2.44");
+        PersonalComputer thePC = new PersonalComputer("2208", "Dell"
+                , computerCase, motherboard, theMonitor);
 //        thePC.getMonitor().drawPixelAt(8,10,"red");
 //        thePC.getMotherboard().loadProgram("Windows OS");
 //        thePC.getComputerCase().pressPowerButton();
@@ -131,5 +150,6 @@ public class Main {
         }
         System.out.printf("First Char = %c %n", string.charAt(0));
         System.out.printf("Last Char = %c %n", string.charAt(length - 1));
+
     }
 }
