@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -91,11 +92,34 @@ public class Main {
         }
         s.close();
 
+        DogAbs dogA = new DogAbs("Wolf","big",100);
+        dogA.makeNoise();
+        doAnimalStuffAbs(dogA);
+
+        ArrayList<AnimalAbstract> animals  = new ArrayList<>();
+        animals.add(dogA);
+        animals.add(new DogAbs("German Shepherd","big",150));
+        animals.add(new FishAbs("GoldFish","small",1));
+        animals.add(new FishAbs("Shark","Medium",600));
+        animals.add(new DogAbs("Pug","small",15));
+        animals.add(new HorseAbs("clydeSale","large",1000));
+        for (AnimalAbstract animalax:animals){
+            doAnimalStuffAbs( animalax);
+            if(animalax instanceof Mammal currentMammal){
+                currentMammal.shedHair();
+            }
+        }
 
 
 
 
     }
+
+    public static void doAnimalStuffAbs(AnimalAbstract animal) {
+        animal.makeNoise();
+        animal.move("slow");
+        System.out.println(animal);
+        System.out.println("_________");}
 
     // new ----------------------Animal codes ------------------
     public static void doAnimalStuff(Animal animal, String speed) {
