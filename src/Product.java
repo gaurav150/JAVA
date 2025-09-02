@@ -11,9 +11,10 @@ public class Product {
     }
 }
 
-class Monitor extends Product{
+class Monitor extends Product {
     int size;
     String Resolution;
+
     public Monitor(String model, String manufacturer) {
         super(model, manufacturer);
     }
@@ -24,18 +25,20 @@ class Monitor extends Product{
         this.size = size;
         Resolution = resolution;
     }
-    public void drawPixelAt(int x,int y , String color){
+
+    public void drawPixelAt(int x, int y, String color) {
         System.out.println(
                 String.format(
-                        "Drawing Pixels at %d %d in color %s",x,y,color)
+                        "Drawing Pixels at %d %d in color %s", x, y, color)
         );
     }
 }
 
-class Motherboard extends Product{
+class Motherboard extends Product {
     private int ramSlots;
     private int cardSlots;
     private String bios;
+
     public Motherboard(String model, String manufacturer) {
         super(model, manufacturer);
     }
@@ -47,15 +50,17 @@ class Motherboard extends Product{
         this.cardSlots = cardSlots;
         this.bios = bios;
     }
-    public void loadProgram(String programName){
-        System.out.println("Program "+programName+" is  now Loading..... ");
+
+    public void loadProgram(String programName) {
+        System.out.println("Program " + programName + " is  now Loading..... ");
     }
 
 }
 
 
-class ComputerCase extends Product{
+class ComputerCase extends Product {
     private String powerSupply;
+
     public ComputerCase(String model, String manufacturer) {
         super(model, manufacturer);
     }
@@ -64,7 +69,8 @@ class ComputerCase extends Product{
         super(model, manufacturer);
         this.powerSupply = powerSupply;
     }
-    public void pressPowerButton(){
+
+    public void pressPowerButton() {
         System.out.println("Power Button Pressed.");
     }
 }

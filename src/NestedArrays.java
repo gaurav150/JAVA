@@ -11,11 +11,11 @@ public class NestedArrays {
 //
 //        }
 
-        for (int i = 0;i< array2.length;i++){
-            var innerArray  = array2[i];
-            for(int j =0;j<innerArray.length;j++){
+        for (int i = 0; i < array2.length; i++) {
+            var innerArray = array2[i];
+            for (int j = 0; j < innerArray.length; j++) {
 //                System.out.print(array2[i][j]+" ");
-                array2[i][j] = (i*8)+(j*9);
+                array2[i][j] = (i * 8) + (j * 9);
             }
             System.out.println();
         }
