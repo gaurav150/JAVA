@@ -3,7 +3,6 @@ import java.util.Arrays;
 
 
 public class SortedArray {
-    // write code here   
     public static int[] getIntegers(int capacity) {
         Scanner sc = new Scanner(System.in);
         int[] array = new int[capacity];
