@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
+
+
 public class Main {
     public static void main(String[] args) {
         Car car = new Car();
@@ -109,6 +108,24 @@ public class Main {
                 currentMammal.shedHair();
             }
         }
+
+
+        PlayingCard aceOfHearts = new PlayingCard("Hearts","ace");
+        PlayingCard kingOfClubs = new PlayingCard("Clubs","kings");
+        PlayingCard queenSpades = new PlayingCard("Spades","queen");
+
+        List<PlayingCard> cards = Arrays.asList(aceOfHearts,kingOfClubs,queenSpades);
+        cards.forEach(t -> System.out.println(t + " : "+t.hashCode()));
+
+        Set<PlayingCard> deck = new HashSet<>();
+        for (PlayingCard r: cards){
+            if(!deck.add(r)){
+                System.out.println("Found A duplicate for "+ r);
+
+            }
+        }
+        System.out.println(deck);
+
 
 
 
