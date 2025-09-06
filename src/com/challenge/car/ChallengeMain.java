@@ -1,6 +1,5 @@
 package com.challenge.car;
 
-import java.util.concurrent.Callable;
 
 public class ChallengeMain {
 
@@ -9,12 +8,12 @@ public class ChallengeMain {
         runRace(car);
 
         ChallengeCar Ferrari = new GasPoweredCar("2022 Blue Ferrari 296 Gts",
-        15.4,6);
+                15.4, 6);
         runRace(Ferrari);
 
     }
 
-    public static void runRace(ChallengeCar car){
+    public static void runRace(ChallengeCar car) {
         car.startEngine();
         car.drive();
     }

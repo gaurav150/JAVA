@@ -17,11 +17,11 @@ public class GasPoweredCar extends ChallengeCar {
 
     @Override
     public void startEngine() {
-        System.out.printf("Gas -> All %d Cylinders are fired up, Ready! %n",cylinders);
+        System.out.printf("Gas -> All %d Cylinders are fired up, Ready! %n", cylinders);
     }
 
     @Override
     protected void runEngine() {
-        System.out.printf("Gas -> usage exceeds the average: %.2f %n",avgKmPerLitre);
+        System.out.printf("Gas -> usage exceeds the average: %.2f %n", avgKmPerLitre);
     }
 }

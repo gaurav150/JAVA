@@ -1,8 +1,8 @@
 package com.challenge.car;
 
 public class ElectricCar extends ChallengeCar {
-    private double avgKmPerLitre;
-    private int batterySize;
+    private final double avgKmPerLitre;
+    private final int batterySize;
 
     public ElectricCar(String description, double avgKmPerLitre, int batterySize) {
         super(description);

@@ -2,9 +2,9 @@ package com.challenge.car;
 
 
 public class ChallengeCar {
-    private String description;
+    private final String description;
 
-    public ChallengeCar(String description){
+    public ChallengeCar(String description) {
         this.description = description;
     }
 
