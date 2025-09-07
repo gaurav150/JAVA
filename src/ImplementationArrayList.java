@@ -22,7 +22,6 @@ public class ImplementationArrayList {
         groceryArray[0] = new GroceryItem("milk");
         groceryArray[1] = new GroceryItem("Apple", "Produce", 6);
         groceryArray[2] = new GroceryItem("Oranges", "Produce", 5);
-        ;
         System.out.println(Arrays.toString(groceryArray));
 
         ArrayList objectList = new ArrayList();

@@ -18,8 +18,8 @@ abstract class Mammal extends AnimalAbstract {
 
 public abstract class AnimalAbstract {
     protected String type;
-    private String size;
-    private double weight;
+    private final String size;
+    private final double weight;
 
 
     public AnimalAbstract(String type, String size, double weight) {

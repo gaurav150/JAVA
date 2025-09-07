@@ -1,5 +1,5 @@
 public class PrimarySchoolStudent extends Student {
-    private String parentName;
+    private final String parentName;
 
     public PrimarySchoolStudent(String name, int age, String parentName) {
         super(name, age);

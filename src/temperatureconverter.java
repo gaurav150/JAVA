@@ -5,9 +5,10 @@ public class temperatureconverter {
         tempconversion(32.6f);
 
     }
-    public static void tempconversion(float tmp){
+
+    public static void tempconversion(float tmp) {
         float F;
-        F = tmp * 9/5 + 32;
-        System.out.println("temperature in fahreinheit is: "+ F);
+        F = tmp * 9 / 5 + 32;
+        System.out.println("temperature in fahreinheit is: " + F);
     }
 }

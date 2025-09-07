@@ -6,7 +6,7 @@ public class ChallengePractice40 {
         System.out.println("my Total value is" + total);
         double theRemainder = total % 40.0d;
         System.out.println("Remainder of the calculation is " + theRemainder);
-        boolean isNoRemainder = (theRemainder == 0) ? true : false;
+        boolean isNoRemainder = theRemainder == 0;
         System.out.println("isNoRemainder = " + isNoRemainder);
         if (!isNoRemainder) {
             System.out.println("Got Some Remainder");

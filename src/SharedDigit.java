@@ -19,6 +19,6 @@ public class SharedDigit {
     }
 
     public static void main(String[] args) {
-        System.out.println(hasSharedDigit(23,94));
+        System.out.println(hasSharedDigit(23, 94));
     }
 }

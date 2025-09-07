@@ -1,9 +1,10 @@
 public class LastDigitChecker {
-    public static boolean isValid(int number){
-        return number >= 10 && number <=1000;
+    public static boolean isValid(int number) {
+        return number >= 10 && number <= 1000;
     }
+
     // write code here
-    public static boolean hasSameLastDigit(int num1,int num2,int num3) {
+    public static boolean hasSameLastDigit(int num1, int num2, int num3) {
 
         if (!isValid(num1) || !isValid(num2) || !isValid(num3)) {
             return false;
@@ -21,6 +22,6 @@ public class LastDigitChecker {
     }
 
     public static void main(String[] args) {
-        System.out.println(hasSameLastDigit(67,34,42));
+        System.out.println(hasSameLastDigit(67, 34, 42));
     }
 }

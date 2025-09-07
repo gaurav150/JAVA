@@ -1,6 +1,6 @@
 public class Student {
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
 
     public Student(String name, int age) {
         this.name = name;

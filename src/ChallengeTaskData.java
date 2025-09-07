@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ChallengeTaskData {
-    private static String tasks = """
+    private static final String tasks = """
             Infrastructure, Logging, High
             Infrastructure, DB Access, Medium
             Infrastructure, Security, High
@@ -19,7 +19,7 @@ public class ChallengeTaskData {
             
             """;
 
-    private static String annsTasks = """
+    private static final String annsTasks = """
             Infrastructure, Security, High, In Progress
             Infrastructure, Password Policy,Medium, In Progress
             Research, Cloud solutions, Medium, In Progress
@@ -28,14 +28,14 @@ public class ChallengeTaskData {
             Data Access, Write Views, Low, In Progress
             """;
 
-    private static String bobsTasks = """
+    private static final String bobsTasks = """
             Infrastructure, Security, High, In Progress
             Infrastructure, Password Policy, Medium
             Data Design, Encryption Policy, High
             Data Access, Write Views, Low, In Progress
             """;
 
-    private static String carolsTasks = """
+    private static final String carolsTasks = """
             Infrastructure, Logging, High, In Progress
             Infrastructure, DB Access, Medium
             Infrastructure, Password Policy, Medium
@@ -43,24 +43,24 @@ public class ChallengeTaskData {
             Data Access, Write Views, Low
             """;
 
-    public static Set<ChallengeTaskClass> getTasks(String owner){
+    public static Set<ChallengeTaskClass> getTasks(String owner) {
         Set<ChallengeTaskClass> taskList = new HashSet<>();
         String user = ("ann,bob,carol".contains(owner.toLowerCase())) ? owner : null;
-        String selectedList = String.valueOf(switch(owner.toLowerCase()){
+        String selectedList = String.valueOf(switch (owner.toLowerCase()) {
             case "ann" -> annsTasks;
             case "bob" -> bobsTasks;
             case "carol" -> carolsTasks;
             default -> tasks;
         });
-        for(String taskData: selectedList.split("\n")){
+        for (String taskData : selectedList.split("\n")) {
             String[] data = taskData.split(",");
             Arrays.asList(data).replaceAll(String::trim);
-            Status status = (data.length <= 3)?Status.IN_QUEUE:Status.valueOf(data[3].
-                    toUpperCase().replace(' ','_'));
+            Status status = (data.length <= 3) ? Status.IN_QUEUE : Status.valueOf(data[3].
+                    toUpperCase().replace(' ', '_'));
 
             Priority priority = Priority.valueOf(data[2].toUpperCase());
-            taskList.add(new ChallengeTaskClass(data[0],data[1],
-                    user,priority,status));
+            taskList.add(new ChallengeTaskClass(data[0], data[1],
+                    user, priority, status));
         }
         return taskList;
 

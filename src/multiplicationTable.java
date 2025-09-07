@@ -12,12 +12,12 @@ public class multiplicationTable {
         }
     }
 
-        public static void main (String[] args){
-            Scanner s = new Scanner(System.in);
-            System.out.println("enter the number for which you want to do multiplication");
-            int num1 = s.nextInt();
-            mul_list(num1);
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter the number for which you want to do multiplication");
+        int num1 = s.nextInt();
+        mul_list(num1);
 
 
-        }
     }
+}

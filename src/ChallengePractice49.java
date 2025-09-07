@@ -6,7 +6,7 @@ public class ChallengePractice49 {
     }
 
     public static int calculateHighScorePosition(int playerScore) {
-        int result ;
+        int result;
         if (playerScore >= 1000) {
             result = 1;
         } else if (playerScore >= 500) {

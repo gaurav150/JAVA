@@ -1,15 +1,16 @@
 public class ClassesChallenge {
-    private long accountNumber = 7987889477869937584l;
+    private long accountNumber = 7987889477869937584L;
     private double accountBalance = 10000.00d;
     private String customerName = "Mohan";
     private String emailId = "mohan@gmail.com";
-    private long phoneNumber = 7865943723l;
-    public ClassesChallenge(){
+    private long phoneNumber = 7865943723L;
+
+    public ClassesChallenge() {
 
         System.out.println("Constructor called successfully");
     }
 
-    public ClassesChallenge(long accountNumber,double accountBalance,String customerName,String emailId,long phoneNumber){
+    public ClassesChallenge(long accountNumber, double accountBalance, String customerName, String emailId, long phoneNumber) {
         System.out.println("Constructor With parameters called successfully");
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;

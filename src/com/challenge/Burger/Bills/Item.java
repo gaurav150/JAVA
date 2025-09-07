@@ -1,9 +1,9 @@
 package com.challenge.Burger.Bills;
 
 public class Item {
-    private String type;
-    private String name;
-    private double price;
+    private final String type;
+    private final String name;
+    private final double price;
     private String size = "MEDIUM";
 
 
@@ -15,8 +15,8 @@ public class Item {
 
     public String getName() {
 
-        if(type.equals("SIDE")||type.equals("DRINK")){
-            return  size +" "+name;
+        if (type.equals("SIDE") || type.equals("DRINK")) {
+            return size + " " + name;
         }
         return name;
     }
@@ -25,11 +25,11 @@ public class Item {
         return price;
     }
 
-    public double getAdjustedPrice(){
-        return switch (size){
+    public double getAdjustedPrice() {
+        return switch (size) {
             case "SMALL" -> getBasePrice() - 0.5;
             case "LARGE" -> getBasePrice() + 1;
-            default ->  getBasePrice();
+            default -> getBasePrice();
         };
     }
 
@@ -37,11 +37,11 @@ public class Item {
         this.size = size;
     }
 
-    public static void printItem(String name,double price){
-        System.out.printf("%20s:%6.2f%n",name,price);
+    public static void printItem(String name, double price) {
+        System.out.printf("%20s:%6.2f%n", name, price);
     }
 
-    public void printItem(){
-        printItem(getName(),getAdjustedPrice());
+    public void printItem() {
+        printItem(getName(), getAdjustedPrice());
     }
 }

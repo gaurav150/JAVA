@@ -4,6 +4,7 @@ public class gradeclass {
         gradecal(8);
 
     }
+
     public static void gradecal(int score) {
         if (score >= 90) {
             System.out.println('A');

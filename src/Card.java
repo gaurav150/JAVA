@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -14,7 +12,7 @@ public record Card(Suit suit, String face, int rank) {
         }
     }
 
-    public static Comparator<Card> sortRankReversedSuit(){
+    public static Comparator<Card> sortRankReversedSuit() {
         return Comparator.comparing(Card::rank).reversed()
                 .thenComparing(Card::suit);
     }

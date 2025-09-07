@@ -25,9 +25,9 @@ public class Main {
         classesChallenge.amountWithdraw(20000);
         classesChallenge.amountWithdraw(2000);
         System.out.println(classesChallenge.getAccountBalance());
-        ClassesChallenge cc = new ClassesChallenge(1245758l,
+        ClassesChallenge cc = new ClassesChallenge(1245758L,
                 2300.09d, "Ram",
-                "ram@gmail.com", 9876545356l);
+                "ram@gmail.com", 9876545356L);
         // new ----------------------Animal codes ------------------
         System.out.println("===============");
         Animal animal = new Animal("Generic Animal", "Huge", 400);
@@ -65,69 +65,66 @@ public class Main {
 //        System.out.println("After Restoring Health " + player.healthRemaining());
 
         EnhancedPlayer gautam = new EnhancedPlayer("Gautam");
-        System.out.println("Initial Health is "+gautam.healthRemaining());
+        System.out.println("Initial Health is " + gautam.healthRemaining());
 
         Movie theMovie = new Movie("Star wars");
         theMovie.watchMovie();
 
-        Movie theMovies =  new Adventure("Star wars");
+        Movie theMovies = new Adventure("Star wars");
         theMovies.watchMovie();
 
-        Movie theMoviess = Movie.getMovie("Adventure","Star wars");
+        Movie theMoviess = Movie.getMovie("Adventure", "Star wars");
         theMoviess.watchMovie();
         Scanner s = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.print("Enter Type(A for Adventure" +
                     ",C for Comedy " +
                     "S for ScienceFiction, or Q to quit)");
-            String type =s.nextLine();
-            if("Qq".contains(type)){
+            String type = s.nextLine();
+            if ("Qq".contains(type)) {
                 break;
             }
             System.out.println("Enter the movie title: ");
             String title = s.nextLine();
-            Movie movie = Movie.getMovie(type,title);
+            Movie movie = Movie.getMovie(type, title);
             movie.watchMovie();
         }
         s.close();
 
-        DogAbs dogA = new DogAbs("Wolf","big",100);
+        DogAbs dogA = new DogAbs("Wolf", "big", 100);
         dogA.makeNoise();
         doAnimalStuffAbs(dogA);
 
-        ArrayList<AnimalAbstract> animals  = new ArrayList<>();
+        ArrayList<AnimalAbstract> animals = new ArrayList<>();
         animals.add(dogA);
-        animals.add(new DogAbs("German Shepherd","big",150));
-        animals.add(new FishAbs("GoldFish","small",1));
-        animals.add(new FishAbs("Shark","Medium",600));
-        animals.add(new DogAbs("Pug","small",15));
-        animals.add(new HorseAbs("clydeSale","large",1000));
-        for (AnimalAbstract animalax:animals){
-            doAnimalStuffAbs( animalax);
-            if(animalax instanceof Mammal currentMammal){
+        animals.add(new DogAbs("German Shepherd", "big", 150));
+        animals.add(new FishAbs("GoldFish", "small", 1));
+        animals.add(new FishAbs("Shark", "Medium", 600));
+        animals.add(new DogAbs("Pug", "small", 15));
+        animals.add(new HorseAbs("clydeSale", "large", 1000));
+        for (AnimalAbstract animalax : animals) {
+            doAnimalStuffAbs(animalax);
+            if (animalax instanceof Mammal currentMammal) {
                 currentMammal.shedHair();
             }
         }
 
 
-        PlayingCard aceOfHearts = new PlayingCard("Hearts","ace");
-        PlayingCard kingOfClubs = new PlayingCard("Clubs","kings");
-        PlayingCard queenSpades = new PlayingCard("Spades","queen");
+        PlayingCard aceOfHearts = new PlayingCard("Hearts", "ace");
+        PlayingCard kingOfClubs = new PlayingCard("Clubs", "kings");
+        PlayingCard queenSpades = new PlayingCard("Spades", "queen");
 
-        List<PlayingCard> cards = Arrays.asList(aceOfHearts,kingOfClubs,queenSpades);
-        cards.forEach(t -> System.out.println(t + " : "+t.hashCode()));
+        List<PlayingCard> cards = Arrays.asList(aceOfHearts, kingOfClubs, queenSpades);
+        cards.forEach(t -> System.out.println(t + " : " + t.hashCode()));
 
         Set<PlayingCard> deck = new HashSet<>();
-        for (PlayingCard r: cards){
-            if(!deck.add(r)){
-                System.out.println("Found A duplicate for "+ r);
+        for (PlayingCard r : cards) {
+            if (!deck.add(r)) {
+                System.out.println("Found A duplicate for " + r);
 
             }
         }
         System.out.println(deck);
-
-
-
 
 
     }
@@ -136,7 +133,8 @@ public class Main {
         animal.makeNoise();
         animal.move("slow");
         System.out.println(animal);
-        System.out.println("_________");}
+        System.out.println("_________");
+    }
 
     // new ----------------------Animal codes ------------------
     public static void doAnimalStuff(Animal animal, String speed) {

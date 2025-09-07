@@ -4,11 +4,11 @@ import java.util.Comparator;
 import java.util.List;
 
 public class PokerHand {
-    private List<Card> hand;
-    private List<Card> keepers;
-    private List<Card> discards;
+    private final List<Card> hand;
+    private final List<Card> keepers;
+    private final List<Card> discards;
     private Ranking score = Ranking.NONE;
-    private int playerNo;
+    private final int playerNo;
 
     public PokerHand(int playerNo, List<Card> hand) {
         hand.sort(Card.sortRankReversedSuit());
@@ -55,25 +55,25 @@ public class PokerHand {
             }
 
         });
-        for (String duplicate : duplicateFaceCards){
+        for (String duplicate : duplicateFaceCards) {
             int start = faceList.indexOf(duplicate);
             int last = faceList.lastIndexOf(duplicate);
-            setRank(last-start+1);
-            List <Card> sub = hand.subList(start,last+1);
+            setRank(last - start + 1);
+            List<Card> sub = hand.subList(start, last + 1);
             keepers.addAll(sub);
 
         }
         pickDiscards();
     }
 
-    private void pickDiscards(){
-        List<Card> temp =  new ArrayList<>(hand);
+    private void pickDiscards() {
+        List<Card> temp = new ArrayList<>(hand);
         temp.removeAll(keepers);
         int rankedCards = keepers.size();
         Collections.reverse(temp);
         int index = 0;
-        for (Card c : temp){
-            if(index++ < 3 && (rankedCards>2||c.rank() < 9)) discards.add(c);
+        for (Card c : temp) {
+            if (index++ < 3 && (rankedCards > 2 || c.rank() < 9)) discards.add(c);
             else keepers.add(c);
         }
     }

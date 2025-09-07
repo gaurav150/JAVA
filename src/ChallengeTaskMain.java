@@ -46,8 +46,6 @@ public class ChallengeTaskMain {
         sortAndPrint("Overlapping", overlapping, priorityNatural);
 
 
-
-
     }
 
     public static void sortAndPrint(String header,

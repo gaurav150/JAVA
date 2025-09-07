@@ -1,9 +1,7 @@
-import java.util.Objects;
-
 public class PlayingCard {
-    private String suit;
-    private String face;
-    private int internalHash;
+    private final String suit;
+    private final String face;
+    private final int internalHash;
 
     public PlayingCard(String suit, String face) {
         this.suit = suit;

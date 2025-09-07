@@ -1,7 +1,7 @@
 package com.challenge.interfaces;
 
 
-interface orbitEarth extends FlightEnabled{
+interface orbitEarth extends FlightEnabled {
 
     void achieveOrbit();
 }

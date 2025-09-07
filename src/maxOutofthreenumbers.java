@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class maxOutofthreenumbers {
     public static void main(String[] args) {
@@ -13,7 +13,6 @@ public class maxOutofthreenumbers {
         int no3 = scanner.nextInt();
 
         scanner.close();
-
 
 
         maxmethod(no1, no2, no3);

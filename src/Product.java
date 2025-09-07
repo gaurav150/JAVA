@@ -1,6 +1,6 @@
 public class Product {
-    private String model;
-    private String manufacturer;
+    private final String model;
+    private final String manufacturer;
     private int width;
     private int height;
     private int depth;
@@ -27,10 +27,8 @@ class Monitor extends Product {
     }
 
     public void drawPixelAt(int x, int y, String color) {
-        System.out.println(
-                String.format(
-                        "Drawing Pixels at %d %d in color %s", x, y, color)
-        );
+        System.out.printf(
+                "Drawing Pixels at %d %d in color %s%n", x, y, color);
     }
 }
 

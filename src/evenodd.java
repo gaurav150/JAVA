@@ -4,6 +4,7 @@ public class evenodd {
         find_even_odd(59);
 
     }
+
     public static void find_even_odd(int num) {
         if (num % 2 == 0) {
             System.out.println("given number " + num + " is Even");

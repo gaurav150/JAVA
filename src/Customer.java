@@ -14,9 +14,11 @@ public class Customer {
     public String getEmailId() {
         return emailId;
     }
-    public Customer(){
+
+    public Customer() {
         System.out.println("Default constructor called successfully");
     }
+
     public Customer(String name, double creditLimit, String emailId) {
         this.name = name;
         this.creditLimit = creditLimit;
@@ -25,8 +27,8 @@ public class Customer {
     }
 
     public Customer(String name, String emailId) {
-        this(name,10000,emailId);
-        System.out.println("this is calling another constructor" );
+        this(name, 10000, emailId);
+        System.out.println("this is calling another constructor");
 
     }
 }

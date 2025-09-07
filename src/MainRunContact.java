@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class MainRunContact {
 
 
-    private static Scanner scanner = new Scanner(System.in);
-    private static MobilePhone mobilePhone = new MobilePhone("12345");
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final MobilePhone mobilePhone = new MobilePhone("12345");
 
     public static void main(String[] args) {
         boolean quit = false;

@@ -1,12 +1,10 @@
-
-
-enum Priority{
-    HIGH,MEDIUM,LOW;
+enum Priority {
+    HIGH, MEDIUM, LOW
 }
 
-enum Status {IN_QUEUE,ASSIGNED,IN_PROGRESS}
+enum Status {IN_QUEUE, ASSIGNED, IN_PROGRESS}
 
-public class ChallengeTaskClass implements Comparable<ChallengeTaskClass>{
+public class ChallengeTaskClass implements Comparable<ChallengeTaskClass> {
     private String project;
     private String description;
     private String assignee;
@@ -24,12 +22,12 @@ public class ChallengeTaskClass implements Comparable<ChallengeTaskClass>{
 
     public ChallengeTaskClass(String project, String description,
                               String assignee, Priority priority) {
-        this(project,description,assignee,priority,
-                assignee == null ? Status.IN_QUEUE:Status.ASSIGNED);
+        this(project, description, assignee, priority,
+                assignee == null ? Status.IN_QUEUE : Status.ASSIGNED);
     }
 
     public ChallengeTaskClass(String project, String description, Priority priority) {
-        this(project,description,null,priority);
+        this(project, description, null, priority);
 
     }
 
@@ -99,7 +97,7 @@ public class ChallengeTaskClass implements Comparable<ChallengeTaskClass>{
     @Override
     public int compareTo(ChallengeTaskClass o) {
         int result = this.project.compareTo(o.project);
-        if(result == 0){
+        if (result == 0) {
             result = this.description.compareTo(o.description);
         }
         return result;

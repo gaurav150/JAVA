@@ -30,7 +30,6 @@ public class GetRandomArray {
         if (Arrays.binarySearch(sArray, "Mark") >= 0) {
             System.out.println("Found Mark in the list.");
         }
-        ;
         int[] s1 = {1, 2, 3, 4, 5};
         int[] s2 = {5, 2, 3, 4, 1};
         if (Arrays.equals(s1, s2)) {

@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class MobilePhone {
-    private String myNumber;
-    private ArrayList<Contact> myContacts;
+    private final String myNumber;
+    private final ArrayList<Contact> myContacts;
 
     public MobilePhone(String myNumber) {
         this.myNumber = myNumber;

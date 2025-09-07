@@ -1,20 +1,20 @@
 public class EnhancedPlayer {
-    private String fullName;
+    private final String fullName;
     private int health;
-    private String weapon;
+    private final String weapon;
 
     public EnhancedPlayer(String fullName) {
-        this(fullName,100,"Sword");
+        this(fullName, 100, "Sword");
     }
 
     public EnhancedPlayer(String fullName, int health, String weapon) {
         this.fullName = fullName;
 
-        if (health <= 0){
+        if (health <= 0) {
             this.health = 1;
-        } else if (health>100) {
-            this.health =100;
-        }else {
+        } else if (health > 100) {
+            this.health = 100;
+        } else {
             this.health = health;
         }
         this.weapon = weapon;

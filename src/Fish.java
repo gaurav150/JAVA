@@ -1,18 +1,18 @@
 public class Fish extends Animal {
-    private int gills;
-    private int fins;
+    private final int gills;
+    private final int fins;
 
-    public Fish(String type,  double weight, int gills, int fins) {
+    public Fish(String type, double weight, int gills, int fins) {
         super(type, "small", weight);
         this.gills = gills;
         this.fins = fins;
     }
 
-    private void moveMuscles(){
+    private void moveMuscles() {
         System.out.println("Muscles moving");
     }
 
-    private void moveBackFins(){
+    private void moveBackFins() {
         System.out.println("BackFin moving");
     }
 
@@ -20,7 +20,7 @@ public class Fish extends Animal {
     public void move(String speed) {
         super.move(speed);
         moveMuscles();
-        if(speed=="fast"){
+        if (speed == "fast") {
             moveBackFins();
         }
         System.out.println();
