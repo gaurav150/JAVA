@@ -10,7 +10,7 @@ public class MobilePhone {
     }
 
     public boolean addNewContact(Contact contact) {
-        if (findContact(contact.getName()) >= 0) {
+        if (findContact(contact.name()) >= 0) {
             System.out.println("Contact is already on file");
             return false;
         }
@@ -21,27 +21,27 @@ public class MobilePhone {
     public boolean updateContact(Contact oldContact, Contact newContact) {
         int foundPosition = findContact(oldContact);
         if (foundPosition < 0) {
-            System.out.println(oldContact.getName() + " was not found.");
+            System.out.println(oldContact.name() + " was not found.");
             return false;
-        } else if (findContact(newContact.getName()) != -1) {
-            System.out.println("Contact with name " + newContact.getName() +
+        } else if (findContact(newContact.name()) != -1) {
+            System.out.println("Contact with name " + newContact.name() +
                     " already exists. Update was not successful.");
             return false;
         }
 
         this.myContacts.set(foundPosition, newContact);
-        System.out.println(oldContact.getName() + " was replaced with " + newContact.getName());
+        System.out.println(oldContact.name() + " was replaced with " + newContact.name());
         return true;
     }
 
     public boolean removeContact(Contact contact) {
         int foundPosition = findContact(contact);
         if (foundPosition < 0) {
-            System.out.println(contact.getName() + " was not found.");
+            System.out.println(contact.name() + " was not found.");
             return false;
         }
         this.myContacts.remove(foundPosition);
-        System.out.println(contact.getName() + " was deleted.");
+        System.out.println(contact.name() + " was deleted.");
         return true;
     }
 
@@ -52,7 +52,7 @@ public class MobilePhone {
     private int findContact(String contactName) {
         for (int i = 0; i < myContacts.size(); i++) {
             Contact contact = myContacts.get(i);
-            if (contact.getName().equals(contactName)) {
+            if (contact.name().equals(contactName)) {
                 return i;
             }
         }
@@ -71,8 +71,8 @@ public class MobilePhone {
         System.out.println("Contact List:");
         for (int i = 0; i < this.myContacts.size(); i++) {
             System.out.println((i + 1) + ". " +
-                    this.myContacts.get(i).getName() + " -> " +
-                    this.myContacts.get(i).getPhoneNumber());
+                    this.myContacts.get(i).name() + " -> " +
+                    this.myContacts.get(i).phoneNumber());
         }
     }
 }

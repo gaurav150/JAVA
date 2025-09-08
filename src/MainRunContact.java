@@ -108,7 +108,7 @@ public class MainRunContact {
             return;
         }
 
-        System.out.println("Name: " + existingContact.getName() + " phone number is " + existingContact.getPhoneNumber());
+        System.out.println("Name: " + existingContact.name() + " phone number is " + existingContact.phoneNumber());
     }
 
     private static void startPhone() {
