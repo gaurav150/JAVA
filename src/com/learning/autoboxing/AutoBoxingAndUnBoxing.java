@@ -1,4 +1,5 @@
 package com.learning.autoboxing;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,35 +19,33 @@ public class AutoBoxingAndUnBoxing {
 
         Double resultBoxed = getLiteralDoublePrimitive();
         double resultUnboxed = getDoubleObject();
-        System.out.println("result Boxed "+resultBoxed);
-        System.out.println("result unBoxed "+resultUnboxed);
+        System.out.println("result Boxed " + resultBoxed);
+        System.out.println("result unBoxed " + resultUnboxed);
 
         Integer[] wrapperArray = new Integer[5];
         wrapperArray[0] = 40;
         System.out.println("This is example of wrapper Array is "
-                +Arrays.toString(wrapperArray));
+                + Arrays.toString(wrapperArray));
 
         System.out.println("Warpping class name is "
-                +wrapperArray[0].getClass().getName());
+                + wrapperArray[0].getClass().getName());
 
-        Character[] characterArray = {'a','b','c','d'};
-        System.out.println("Character Array is "+ Arrays.toString(characterArray));
+        Character[] characterArray = {'a', 'b', 'c', 'd'};
+        System.out.println("Character Array is " + Arrays.toString(characterArray));
 
-        var ourList = getList(1,2,3,4,5);
-        System.out.println("output of ourList is "+ourList);
+        var ourList = getList(1, 2, 3, 4, 5);
+        System.out.println("output of ourList is " + ourList);
 
-        var newList = List.of(1,2,3,4,5,6);
-        System.out.println("output of new List is "+newList);
-
-
+        var newList = List.of(1, 2, 3, 4, 5, 6);
+        System.out.println("output of new List is " + newList);
 
 
     }
 
-    private static ArrayList<Integer> getList(Integer ...varArgs){
+    private static ArrayList<Integer> getList(Integer... varArgs) {
         // in the parameter we may use int ...varArgs
         ArrayList<Integer> aList = new ArrayList<>();
-        for (int i : varArgs){
+        for (int i : varArgs) {
             aList.add(i);
         }
 
@@ -54,19 +53,19 @@ public class AutoBoxingAndUnBoxing {
     }
 
 
-    private static Double getDoubleObject(){
+    private static Double getDoubleObject() {
         return Double.valueOf(100.00);
     }
 
-    private static double getLiteralDoublePrimitive(){
+    private static double getLiteralDoublePrimitive() {
         return 10.0;
     }
 
-    private static int returnAnInt(Integer i){
+    private static int returnAnInt(Integer i) {
         return i;
     }
 
-    private static Integer returnAnInteger(int i){
+    private static Integer returnAnInteger(int i) {
         return i;
     }
 }
