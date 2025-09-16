@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.BinaryOperator;
 
 public class LambdaIntro {
 
@@ -54,6 +55,16 @@ public class LambdaIntro {
         people.sort(comparatorMixed);
         System.out.println("After Mixed Comparator implementation "+people);
 
+        int result = calculator((a,b) ->
+                a + b,5,2);
+
+        var result2  = calculator((a,b)
+                -> a /b,10.0,3.4);
+
+        var result3  = calculator((a,b) ->
+                        a.toUpperCase()+" "+b.toUpperCase(),
+                "Raplph","Kramden");
+
     }
 
     record Person(String firstName, String lastName) {
@@ -61,5 +72,11 @@ public class LambdaIntro {
         public String toString() {
             return firstName + " " + lastName;
         }
+    }
+
+    public static <T> T calculator(BinaryOperator<T> function, T value1, T value2) {
+        T result = function.apply(value1, value2);
+        System.out.println("Result of the of operation " + result);
+        return result;
     }
 }
