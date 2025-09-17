@@ -1,11 +1,9 @@
 package dev.lpa.lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
+import java.util.function.Supplier;
 
 public class LambdaIntro {
 
@@ -94,8 +92,34 @@ public class LambdaIntro {
         list.removeIf(s -> s.startsWith("ea"));
         list.forEach(s -> System.out.println(s));
 
+        list.replaceAll(s -> s.charAt(0)+" - "+s.toUpperCase());
+        System.out.println("_".repeat(30));
+        list.forEach(s -> System.out.println(s));
 
+        String[] emptyStrings = new String[10];
+        System.out.println(Arrays.toString(emptyStrings));
 
+        Arrays.fill(emptyStrings,"");
+        System.out.println(Arrays.toString(emptyStrings));
+
+        Arrays.setAll(emptyStrings,(i) -> ""+ (i+1) +". ");
+        System.out.println(Arrays.toString(emptyStrings));
+
+        Arrays.setAll(emptyStrings,(i) -> ""+ (i+1) +". "
+        + switch (i){
+            case 0 -> "One";
+            case 1 -> "Two";
+            case 2 -> "Three";
+            case 3 -> "Four";
+            case 4 -> "Five";
+            default -> "";
+        });
+        System.out.println(Arrays.toString(emptyStrings));
+
+        String[] names = {"Ann","Bob","Carol","David","Ed","Fred"};
+        String[] randomList = randomlySelectedValues(15,names,
+                ()-> new Random().nextInt(0, names.length));
+        System.out.println(Arrays.toString(randomList));
 
     }
 
@@ -115,5 +139,15 @@ public class LambdaIntro {
     public static <T> void processPoint(T t1, T t2, BiConsumer<T,T> consumer){
         consumer.accept(t1,t2);
 
+    }
+
+    public static String[] randomlySelectedValues(int count, String[] values,
+                                                  Supplier<Integer> s){
+        String[] selectedValues = new String[count];
+        for(int i = 0; i < count ; i++){
+            selectedValues[i] = values[s.get()];
+
+        }
+        return selectedValues;
     }
 }
