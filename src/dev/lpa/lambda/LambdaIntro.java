@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 
 public class LambdaIntro {
@@ -65,6 +66,37 @@ public class LambdaIntro {
                         a.toUpperCase()+" "+b.toUpperCase(),
                 "Raplph","Kramden");
 
+        var coords = Arrays.asList(
+                new double[]{47.216,-87.9876},
+                new double[]{34.67,-67.21}
+        );
+
+        coords.forEach(s -> System.out.println(Arrays.toString(s)));
+
+        BiConsumer<Double,Double> p1 = (lat,lng) ->
+                System.out.printf("[lat:%.3f lon: %.3f]%n", lat,lng);
+
+
+        var firstPoint = coords.get(0);
+        processPoint(firstPoint[0],firstPoint[1],p1);
+
+        System.out.println("_".repeat(40));
+        coords.forEach(s -> processPoint(s[0],s[1],p1));
+
+        List<String> list = new ArrayList<>(List.of("Alpha","Bravo","Charlie","delta"));
+        list.removeIf(s -> s.equalsIgnoreCase("bravo"));
+
+        list.addAll(List.of("easy","echo","ease"));
+        list.forEach(s -> System.out.println(s));
+
+        System.out.println("_".repeat(30));
+
+        list.removeIf(s -> s.startsWith("ea"));
+        list.forEach(s -> System.out.println(s));
+
+
+
+
     }
 
     record Person(String firstName, String lastName) {
@@ -78,5 +110,10 @@ public class LambdaIntro {
         T result = function.apply(value1, value2);
         System.out.println("Result of the of operation " + result);
         return result;
+    }
+
+    public static <T> void processPoint(T t1, T t2, BiConsumer<T,T> consumer){
+        consumer.accept(t1,t2);
+
     }
 }
