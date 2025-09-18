@@ -31,6 +31,7 @@ public class LambdaFunctionalInterfacesImplementations {
         Predicate<Integer> isEven = (num) -> num % 2 == 0;
         System.out.println(isEven.test(37));
         System.out.println(isEven.test(38));
+        System.out.println(isEven.test(3));
 
         // 4️⃣ Function: Takes input, returns transformed value
         Function<String, Integer> lengthFunction = str -> str.length();
