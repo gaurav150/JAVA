@@ -18,6 +18,7 @@ class PlainOld {
 
 public class MethodReferencesInLambda {
     public static void main(String[] args) {
+//        System.out.println(System.getProperty("java.version"));
         List<String> list = new ArrayList<>(List.of("Anna", "Bob", "Chuck", "Dave"));
         list.forEach(System.out::println); // is called Method Reference.
         /*
