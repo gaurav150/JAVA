@@ -99,7 +99,11 @@ public class MapMain {
 
         contacts.forEach((k,v) -> System.out.println("Key = "+ k +", Value= "+ v));
 
-        }
+        System.out.println("-".repeat(50));
+        System.out.println(contacts.remove("Daisy Duck", daisy) ? "Successfully removed element." :
+                String.format("Did not match on Both key: %s and value: %s %n", "Daisy Duck", daisy));
+        contacts.forEach((k,v) -> System.out.println("Key = "+ k +", Value= "+ v));
+
 
     }
-
+ }
